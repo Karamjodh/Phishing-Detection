@@ -3,6 +3,7 @@ import sys
 import numpy as np
 import pandas as pd
 import pymongo
+import certifi
 from typing import List
 from sklearn.model_selection import train_test_split
 from Network_Security.Exception_Handling.Exception import NetworkSecurityException
@@ -26,17 +27,34 @@ class DataIngestion :
         try:
             database_name = self.data_ingestion_config.database_name
             collection_name = self.data_ingestion_config.collection_name
-            self.mongo_client = pymongo.MongoClient(MONGO_DB_URL)
-            collection = self.mongo_client[database_name][collection_name]
-            df = pd.DataFrame(list(collection.find()))
-            if "_id" in df.columns.to_list():
-                df.drop(columns = ["_id"],axis = 1,inplace = True)
 
-            df.replace({"na":np.nan},inplace = True)
+            if not MONGO_DB_URL:
+                raise ValueError("MONGO_DB_URL is missing. Check your .env and load_dotenv().")
+
+            # Stronger, more reliable client
+            self.mongo_client = pymongo.MongoClient(
+                MONGO_DB_URL,
+                tls=True,
+                tlsCAFile=certifi.where(),
+                serverSelectionTimeoutMS=30000,
+                connectTimeoutMS=20000,
+                socketTimeoutMS=20000,
+            )
+
+            # quick ping so errors show here clearly
+            self.mongo_client.admin.command("ping")
+
+            collection = self.mongo_client[database_name][collection_name]
+
+            df = pd.DataFrame(list(collection.find()))
+            if "_id" in df.columns:
+                df.drop(columns=["_id"], inplace=True)
+
+            df.replace({"na": np.nan}, inplace=True)
             return df
-        
+
         except Exception as e:
-            raise NetworkSecurityException(e,sys)
+            raise NetworkSecurityException(e, sys)
         
     def export_data_to_feature_store(self,dataframe : pd.DataFrame):
         try:
