@@ -90,6 +90,7 @@ class DataValidation :
             invalid_test_file_path= None,
             drift_report_file_path=self.data_validation_config.data_drift_report_file_path
             )
+            return data_validation_artifact
         except Exception as e:
             raise NetworkSecurityException(e,sys)
 
