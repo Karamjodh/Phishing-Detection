@@ -5,5 +5,5 @@ pymongo
 certifi
 dill
 scikit-learn
-sklearn
+pyyaml
 # -e .
