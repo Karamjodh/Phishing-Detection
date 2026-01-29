@@ -1,0 +1,35 @@
+[2026-01-27 15:25:42,481] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-01-27 15:25:42,484] 107 dagshub - INFO - Accessing as Karamjodh
+[2026-01-27 15:25:43,489] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Karamjodh/Network-Security "HTTP/1.1 200 OK"
+[2026-01-27 15:25:44,435] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-01-27 15:25:44,436] 107 dagshub - INFO - Initialized MLflow to track repo "Karamjodh/Network-Security"
+[2026-01-27 15:25:44,438] 107 dagshub - INFO - Repository Karamjodh/Network-Security initialized!
+[2026-01-27 15:25:44,438] 16 root - INFO - Initiating Data Ingestion
+[2026-01-27 15:25:58,892] 73 root - INFO - Performed train test split on the Dataframe
+[2026-01-27 15:25:58,892] 74 root - INFO - Exited split_data_as_train_test method of Data_Ingestion Class
+[2026-01-27 15:25:58,892] 77 root - INFO - Exporting train and test file path
+[2026-01-27 15:25:58,930] 80 root - INFO - Exported train and test file path
+[2026-01-27 15:25:58,930] 18 root - INFO - Data Ingestion Completed
+[2026-01-27 15:25:58,936] 22 root - INFO - Initiating Data Validation
+[2026-01-27 15:25:58,975] 34 root - INFO - Required number of columns : 2
+[2026-01-27 15:25:58,975] 35 root - INFO - DataFrame has columns : 31
+[2026-01-27 15:25:58,975] 34 root - INFO - Required number of columns : 2
+[2026-01-27 15:25:58,975] 35 root - INFO - DataFrame has columns : 31
+[2026-01-27 15:25:59,094] 24 root - INFO - Data Validation Completed
+[2026-01-27 15:25:59,094] 27 root - INFO - data transformation started
+[2026-01-27 15:25:59,094] 43 root - INFO - Entered initiate_data_transformation mehtod of dataTransformation class
+[2026-01-27 15:25:59,094] 45 root - INFO - Starting data tranformation
+[2026-01-27 15:25:59,109] 33 root - INFO - Entered get_data_transformer_object in DataTransformation class
+[2026-01-27 15:25:59,109] 36 root - INFO - Initalize KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[2026-01-27 15:25:59,117] 43 root - INFO - Entered the Save Object method of Main Utils Class
+[2026-01-27 15:25:59,119] 47 root - INFO - Exited the save_bject method of main Utils class
+[2026-01-27 15:25:59,119] 43 root - INFO - Entered the Save Object method of Main Utils Class
+[2026-01-27 15:25:59,120] 47 root - INFO - Exited the save_bject method of main Utils class
+[2026-01-27 15:25:59,121] 31 root - INFO - data transformation completed
+[2026-01-27 15:25:59,121] 32 root - INFO - Model Training Started
+[2026-01-27 15:26:49,115] 43 root - INFO - Entered the Save Object method of Main Utils Class
+[2026-01-27 15:26:49,127] 47 root - INFO - Exited the save_bject method of main Utils class
+[2026-01-27 15:26:49,127] 43 root - INFO - Entered the Save Object method of Main Utils Class
+[2026-01-27 15:26:49,138] 47 root - INFO - Exited the save_bject method of main Utils class
+[2026-01-27 15:26:49,138] 83 root - INFO - Model trainer artifact : ModelTrainerArtifact(trained_model_file_path='Artifacts\\27_01_26_15_25_40\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9905092356362895, precision_score=0.9885923813403952, recall_score=0.9924335378323108), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.980330448465775, precision_score=0.9772549019607844, recall_score=0.9834254143646409))
+[2026-01-27 15:26:49,139] 36 root - INFO - Model Training artifact Created

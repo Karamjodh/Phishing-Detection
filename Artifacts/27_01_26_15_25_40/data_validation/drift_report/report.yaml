@@ -1,0 +1,93 @@
+Abnormal_URL:
+  driftstatus: false
+  p_value: 0.9999654772410788
+DNSRecord:
+  driftstatus: false
+  p_value: 0.3409602392321336
+Domain_registeration_length:
+  driftstatus: false
+  p_value: 0.9739932435377546
+Favicon:
+  driftstatus: false
+  p_value: 0.7786069254909116
+Google_Index:
+  driftstatus: false
+  p_value: 0.9999999977781104
+HTTPS_token:
+  driftstatus: false
+  p_value: 0.9996208033369954
+Iframe:
+  driftstatus: false
+  p_value: 0.9826271842488499
+Links_in_tags:
+  driftstatus: false
+  p_value: 0.9659080032037665
+Links_pointing_to_page:
+  driftstatus: false
+  p_value: 1.0
+Page_Rank:
+  driftstatus: false
+  p_value: 0.9999999999999952
+Prefix_Suffix:
+  driftstatus: false
+  p_value: 0.9999760319468036
+Redirect:
+  driftstatus: false
+  p_value: 0.9597114153770513
+Request_URL:
+  driftstatus: false
+  p_value: 0.7634837477364733
+Result:
+  driftstatus: false
+  p_value: 0.46712546521502574
+RightClick:
+  driftstatus: false
+  p_value: 1.0
+SFH:
+  driftstatus: false
+  p_value: 1.0
+SSLfinal_State:
+  driftstatus: false
+  p_value: 0.9876237011526984
+Shortining_Service:
+  driftstatus: false
+  p_value: 0.918796249345484
+Statistical_report:
+  driftstatus: false
+  p_value: 0.9999999999598222
+Submitting_to_email:
+  driftstatus: false
+  p_value: 0.928294204054473
+URL_Length:
+  driftstatus: false
+  p_value: 0.9998728965778992
+URL_of_Anchor:
+  driftstatus: false
+  p_value: 0.31184401680935797
+age_of_domain:
+  driftstatus: false
+  p_value: 0.9844261985874094
+double_slash_redirecting:
+  driftstatus: false
+  p_value: 0.9958579353974752
+having_At_Symbol:
+  driftstatus: false
+  p_value: 0.9964705532516113
+having_IP_Address:
+  driftstatus: false
+  p_value: 0.9328006214323754
+having_Sub_Domain:
+  driftstatus: false
+  p_value: 0.5654537636267017
+on_mouseover:
+  driftstatus: false
+  p_value: 0.9763752606358573
+popUpWidnow:
+  driftstatus: false
+  p_value: 0.7089345314550541
+port:
+  driftstatus: false
+  p_value: 0.7481247116503471
+web_traffic:
+  driftstatus: false
+  p_value: 0.9999999999876384

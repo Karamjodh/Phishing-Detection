@@ -1,0 +1,7 @@
+[2026-01-27 15:23:19,284] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-01-27 15:23:19,289] 107 dagshub - INFO - Accessing as Karamjodh
+[2026-01-27 15:23:20,426] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Karamjodh/Network-Security "HTTP/1.1 200 OK"
+[2026-01-27 15:23:21,348] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-01-27 15:23:21,350] 107 dagshub - INFO - Initialized MLflow to track repo "Karamjodh/Network-Security"
+[2026-01-27 15:23:21,350] 107 dagshub - INFO - Repository Karamjodh/Network-Security initialized!
+[2026-01-27 15:23:21,351] 16 root - INFO - Initiating Data Ingestion

@@ -1,0 +1,14 @@
+[2026-01-29 14:07:03,666] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-01-29 14:07:03,670] 107 dagshub - INFO - Accessing as Karamjodh
+[2026-01-29 14:07:04,668] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Karamjodh/Network-Security "HTTP/1.1 200 OK"
+[2026-01-29 14:07:05,609] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-01-29 14:07:05,610] 107 dagshub - INFO - Initialized MLflow to track repo "Karamjodh/Network-Security"
+[2026-01-29 14:07:05,611] 107 dagshub - INFO - Repository Karamjodh/Network-Security initialized!
+[2026-01-29 14:07:15,035] 19 root - INFO - Start Data Ingestion
+[2026-01-29 14:08:55,265] 19 root - INFO - Start Data Ingestion
+[2026-01-29 14:08:57,730] 73 root - INFO - Performed train test split on the Dataframe
+[2026-01-29 14:08:57,730] 74 root - INFO - Exited split_data_as_train_test method of Data_Ingestion Class
+[2026-01-29 14:08:57,731] 77 root - INFO - Exporting train and test file path
+[2026-01-29 14:08:57,772] 80 root - INFO - Exported train and test file path
+[2026-01-29 14:08:57,773] 22 root - INFO - Data Ingestion Completed and artifact : DataIngestionArtifact(trained_file_path='Artifacts\\29_01_26_14_07_01\\data_ingestion\\ingested\\train.csv', test_file_path='Artifacts\\29_01_26_14_07_01\\data_ingestion\\ingested\\test.csv')
+[2026-01-29 14:08:57,790] 31 root - INFO - Initiate the data Validation

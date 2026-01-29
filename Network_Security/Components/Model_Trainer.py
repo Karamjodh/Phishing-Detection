@@ -14,6 +14,9 @@ from sklearn.metrics import r2_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import (AdaBoostClassifier,GradientBoostingClassifier,RandomForestClassifier)
+import dagshub
+
+dagshub.init(repo_owner='Karamjodh', repo_name='Network-Security', mlflow=True)
 
 class ModelTrainer:
     def __init__(self,model_trainer_config : ModelTrainerConfig,data_transformation_artifact : DataTransformationArtifact):
@@ -75,6 +78,7 @@ class ModelTrainer:
         os.makedirs(model_dir_path,exist_ok = True)
         Network_Model = NetworkModel(preprocessor = preprocessor, model=best_model)
         save_object(self.model_trainer_config.trained_model_file_path,obj = Network_Model)
+        save_object("Final_Model/Model.pkl",best_model)
         model_trainer_artifact = ModelTrainerArtifact(trained_model_file_path = self.model_trainer_config.trained_model_file_path,train_metric_artifact = classificaton_train_metric,test_metric_artifact = classificaton_test_metric)
         logging.info(f"Model trainer artifact : {model_trainer_artifact}")
         return model_trainer_artifact
