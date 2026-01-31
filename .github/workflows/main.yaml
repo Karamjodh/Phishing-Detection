@@ -8,6 +8,8 @@ on:
       - "README.md"
 
 jobs:
+
+  # ---------------- CI JOB ----------------
   integration:
     name: Continuous Integration
     runs-on: ubuntu-latest
@@ -22,8 +24,10 @@ jobs:
       - name: Run Unit Tests
         run: echo "Running unit tests"
 
+
+  # ---------------- BUILD & PUSH JOB ----------------
   build-and-push-ecr-image:
-    name: Continuous Delivery
+    name: Build & Push to ECR
     needs: integration
     runs-on: ubuntu-latest
 
@@ -47,48 +51,64 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
-      - name: Build, tag, and push image to Amazon ECR
-        id: build-image
+      - name: Build, Tag & Push Image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_NAME }}
           IMAGE_TAG: latest
         run: |
-          # Build Docker image
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-
-          # Push to ECR
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
-          # Save image URI as output
-          echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
-Continuous-Deployment:
-  needs: build-and push-ecr-image
-  runs-on: self-hosted
-  steps:
-    - name : Checkout
-      uses : actions/checkout@v3
+  # ---------------- DEPLOY JOB ----------------
+  deploy-to-ec2:
+    name: Deploy on EC2
+    needs: build-and-push-ecr-image
+    runs-on: self-hosted
 
-    - name : Configure AWS Credentials
-      uses : aws-actions/configure-aws-credentials@v1
-      with :
-        aws-access-key-id : ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key : ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region : ${{ secrets.AWS_REGION }}
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-    - name : Login to Amazon ECR
-      id : login-ecr
-      uses : aws-actions/amazon-ecr-login@v1
 
-    - name : pull latest images
-      run : |
-       docker pull ${{secrets.AWS_ECR_LOGIN_URI}}//${{ secrets.ECR_REPOSITORY_NAME }}:latest
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
-    - name : Run Docker Image to serve users
-      run : |
-       docker run -d -p 8080 : 8080 --ipc = "host" --name=mltest -e 'AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}'
-      
-    - name : Clean previous images and containers
-      run : |
-       docker system prune -f
+
+      - name: Login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v1
+
+
+      - name: Pull Latest Image
+        env:
+          ECR_REGISTRY: ${{ secrets.AWS_ECR_LOGIN_URI }}
+          ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_NAME }}
+        run: |
+          docker pull $ECR_REGISTRY/$ECR_REPOSITORY:latest
+
+
+      - name: Stop Old Container
+        run: |
+          docker stop mltest || true
+          docker rm mltest || true
+
+
+      - name: Run New Container
+        env:
+          ECR_REGISTRY: ${{ secrets.AWS_ECR_LOGIN_URI }}
+          ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_NAME }}
+        run: |
+          docker run -d \
+            --name mltest \
+            -p 8080:8080 \
+            $ECR_REGISTRY/$ECR_REPOSITORY:latest
+
+
+      - name: Cleanup
+        run: |
+          docker system prune -f
