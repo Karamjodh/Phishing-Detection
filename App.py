@@ -26,7 +26,7 @@ database = client[DATA_INGESTION_DATABASE_NAME]
 collection = database[DATA_INGESTION_COLLECTION_NAME]
 
 # Flask app
-app = Flask(__name__)
+app = Flask(__name__,template_folder='Templates')
 CORS(app)
 
 # Global error handler to return JSON instead of HTML
