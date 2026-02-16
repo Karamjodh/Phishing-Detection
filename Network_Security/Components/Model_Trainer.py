@@ -16,6 +16,9 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import (AdaBoostClassifier,GradientBoostingClassifier,RandomForestClassifier)
 import dagshub
 
+dagshub_token = os.getenv('DAGSHUB_USER_TOKEN')
+if dagshub_token:
+    os.environ['DAGSHUB_USER_TOKEN'] = dagshub_token
 dagshub.init(repo_owner='Karamjodh', repo_name='Network-Security', mlflow=True)
 
 class ModelTrainer:

@@ -106,6 +106,7 @@ jobs:
           docker run -d \
             --name mltest \
             -p 8080:8080 \
+            -e DAGSHUB_USER_TOKEN=${{ secrets.DAGSHUB_TOKEN }} \
             $ECR_REGISTRY/$ECR_REPOSITORY:latest
 
 
