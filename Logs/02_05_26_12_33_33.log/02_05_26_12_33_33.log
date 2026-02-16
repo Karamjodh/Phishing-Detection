@@ -1,0 +1,13 @@
+[2026-02-05 12:33:36,499] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 12:33:36,504] 107 dagshub - INFO - Accessing as Karamjodh
+[2026-02-05 12:33:37,630] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Karamjodh/Network-Security "HTTP/1.1 200 OK"
+[2026-02-05 12:33:38,740] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 12:33:38,741] 107 dagshub - INFO - Initialized MLflow to track repo "Karamjodh/Network-Security"
+[2026-02-05 12:33:38,742] 107 dagshub - INFO - Repository Karamjodh/Network-Security initialized!
+[2026-02-05 12:33:38,848] 78 root - WARNING - Could not load models at startup: Error Occured in File [D:\ML Models-Projects\Network Security\Network_Security\Utils\main_utils\Main_Utils.py] line number [58] due to the cause : [No module named 'numpy._core']
+[2026-02-05 12:33:38,864] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.26.52.170:8000
+[2026-02-05 12:33:38,864] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2026-02-05 12:33:38,866] 97 werkzeug - INFO -  * Restarting with stat

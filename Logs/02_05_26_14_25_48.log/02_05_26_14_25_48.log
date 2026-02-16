@@ -1,0 +1,23 @@
+[2026-02-05 14:25:51,838] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 14:25:51,842] 107 dagshub - INFO - Accessing as Karamjodh
+[2026-02-05 14:25:52,912] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Karamjodh/Network-Security "HTTP/1.1 200 OK"
+[2026-02-05 14:25:54,231] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 14:25:54,233] 107 dagshub - INFO - Initialized MLflow to track repo "Karamjodh/Network-Security"
+[2026-02-05 14:25:54,233] 107 dagshub - INFO - Repository Karamjodh/Network-Security initialized!
+[2026-02-05 14:25:54,348] 76 root - INFO - Models loaded successfully for real-time prediction
+[2026-02-05 14:25:54,359] 97 werkzeug - WARNING -  * Debugger is active!
+[2026-02-05 14:25:54,362] 97 werkzeug - INFO -  * Debugger PIN: 997-252-823
+[2026-02-05 14:25:58,672] 97 werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 14:25:58] "GET / HTTP/1.1" 200 -
+[2026-02-05 14:26:00,729] 97 werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 14:26:00] "GET /health HTTP/1.1" 200 -
+[2026-02-05 14:26:02,790] 162 root - INFO - Processing URL: https://www.google.com
+[2026-02-05 14:26:21,782] 168 root - INFO - Extracted 30 features
+[2026-02-05 14:26:21,794] 196 root - INFO - Prediction: Safe (Confidence: 74.0%)
+[2026-02-05 14:26:21,795] 97 werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 14:26:21] "POST /predict-url HTTP/1.1" 200 -
+[2026-02-05 14:26:23,847] 162 root - INFO - Processing URL: http://bit.ly/test
+[2026-02-05 14:26:28,901] 168 root - INFO - Extracted 30 features
+[2026-02-05 14:26:28,911] 196 root - INFO - Prediction: Safe (Confidence: 78.0%)
+[2026-02-05 14:26:28,912] 97 werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 14:26:28] "POST /predict-url HTTP/1.1" 200 -
+[2026-02-05 14:26:30,958] 162 root - INFO - Processing URL: https://github.com
+[2026-02-05 14:26:39,090] 168 root - INFO - Extracted 30 features
+[2026-02-05 14:26:39,101] 196 root - INFO - Prediction: Safe (Confidence: 95.0%)
+[2026-02-05 14:26:39,101] 97 werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 14:26:39] "POST /predict-url HTTP/1.1" 200 -

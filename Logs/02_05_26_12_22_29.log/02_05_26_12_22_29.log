@@ -1,0 +1,9 @@
+[2026-02-05 12:22:33,063] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 12:22:33,067] 107 dagshub - INFO - Accessing as Karamjodh
+[2026-02-05 12:22:33,522] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Karamjodh/Network-Security "HTTP/1.1 200 OK"
+[2026-02-05 12:22:34,646] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 12:22:34,648] 107 dagshub - INFO - Initialized MLflow to track repo "Karamjodh/Network-Security"
+[2026-02-05 12:22:34,648] 107 dagshub - INFO - Repository Karamjodh/Network-Security initialized!
+[2026-02-05 12:22:34,765] 78 root - WARNING - Could not load models at startup: Error Occured in File [D:\ML Models-Projects\Network Security\Network_Security\Utils\main_utils\Main_Utils.py] line number [58] due to the cause : [No module named 'numpy._core']
+[2026-02-05 12:22:34,776] 97 werkzeug - WARNING -  * Debugger is active!
+[2026-02-05 12:22:34,780] 97 werkzeug - INFO -  * Debugger PIN: 997-252-823

@@ -1,0 +1,23 @@
+[2026-02-05 12:40:10,803] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 12:40:10,807] 107 dagshub - INFO - Accessing as Karamjodh
+[2026-02-05 12:40:12,143] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Karamjodh/Network-Security "HTTP/1.1 200 OK"
+[2026-02-05 12:40:13,232] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 12:40:13,234] 107 dagshub - INFO - Initialized MLflow to track repo "Karamjodh/Network-Security"
+[2026-02-05 12:40:13,235] 107 dagshub - INFO - Repository Karamjodh/Network-Security initialized!
+[2026-02-05 12:40:13,354] 76 root - INFO - Models loaded successfully for real-time prediction
+[2026-02-05 12:40:13,365] 97 werkzeug - WARNING -  * Debugger is active!
+[2026-02-05 12:40:13,370] 97 werkzeug - INFO -  * Debugger PIN: 997-252-823
+[2026-02-05 12:40:13,406] 97 werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 12:40:13] "GET / HTTP/1.1" 200 -
+[2026-02-05 12:40:16,907] 162 root - INFO - Processing URL: http://bit.ly/test
+[2026-02-05 12:40:23,985] 168 root - INFO - Extracted 30 features
+[2026-02-05 12:40:23,996] 194 root - INFO - Prediction: Phishing (Confidence: 78.0%)
+[2026-02-05 12:40:23,996] 97 werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 12:40:23] "POST /predict-url HTTP/1.1" 200 -
+[2026-02-05 12:40:53,668] 162 root - INFO - Processing URL: https://www.github.com
+[2026-02-05 12:41:08,995] 168 root - INFO - Extracted 30 features
+[2026-02-05 12:41:09,007] 194 root - INFO - Prediction: Phishing (Confidence: 80.0%)
+[2026-02-05 12:41:09,008] 97 werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 12:41:09] "POST /predict-url HTTP/1.1" 200 -
+[2026-02-05 12:42:12,937] 162 root - INFO - Processing URL: https://www.google.com
+[2026-02-05 12:42:47,032] 168 root - INFO - Extracted 30 features
+[2026-02-05 12:42:47,042] 194 root - INFO - Prediction: Phishing (Confidence: 76.0%)
+[2026-02-05 12:42:47,043] 97 werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 12:42:47] "POST /predict-url HTTP/1.1" 200 -
+[2026-02-05 12:45:27,637] 97 werkzeug - INFO -  * Detected change in 'D:\\ML Models-Projects\\Network Security\\App.py', reloading

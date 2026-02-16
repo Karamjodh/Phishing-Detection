@@ -1,0 +1,10 @@
+[2026-02-05 12:51:29,766] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 12:51:29,771] 107 dagshub - INFO - Accessing as Karamjodh
+[2026-02-05 12:51:30,969] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Karamjodh/Network-Security "HTTP/1.1 200 OK"
+[2026-02-05 12:51:31,965] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 12:51:31,967] 107 dagshub - INFO - Initialized MLflow to track repo "Karamjodh/Network-Security"
+[2026-02-05 12:51:31,968] 107 dagshub - INFO - Repository Karamjodh/Network-Security initialized!
+[2026-02-05 12:51:32,089] 76 root - INFO - Models loaded successfully for real-time prediction
+[2026-02-05 12:51:32,100] 97 werkzeug - WARNING -  * Debugger is active!
+[2026-02-05 12:51:32,103] 97 werkzeug - INFO -  * Debugger PIN: 997-252-823
+[2026-02-05 12:51:42,455] 97 werkzeug - INFO -  * Detected change in 'D:\\ML Models-Projects\\Network Security\\App.py', reloading

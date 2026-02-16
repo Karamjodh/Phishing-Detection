@@ -1,0 +1,14 @@
+[2026-02-05 12:40:04,619] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 12:40:04,623] 107 dagshub - INFO - Accessing as Karamjodh
+[2026-02-05 12:40:05,624] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Karamjodh/Network-Security "HTTP/1.1 200 OK"
+[2026-02-05 12:40:06,629] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 12:40:06,631] 107 dagshub - INFO - Initialized MLflow to track repo "Karamjodh/Network-Security"
+[2026-02-05 12:40:06,631] 107 dagshub - INFO - Repository Karamjodh/Network-Security initialized!
+[2026-02-05 12:40:06,769] 76 root - INFO - Models loaded successfully for real-time prediction
+[2026-02-05 12:40:06,785] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.26.52.170:8000
+[2026-02-05 12:40:06,785] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2026-02-05 12:40:06,788] 97 werkzeug - INFO -  * Restarting with stat
+[2026-02-05 12:45:28,434] 97 werkzeug - INFO -  * Restarting with stat

@@ -1,0 +1,15 @@
+[2026-02-05 12:53:40,522] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 12:53:40,527] 107 dagshub - INFO - Accessing as Karamjodh
+[2026-02-05 12:53:41,535] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Karamjodh/Network-Security "HTTP/1.1 200 OK"
+[2026-02-05 12:53:42,503] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 12:53:42,505] 107 dagshub - INFO - Initialized MLflow to track repo "Karamjodh/Network-Security"
+[2026-02-05 12:53:42,505] 107 dagshub - INFO - Repository Karamjodh/Network-Security initialized!
+[2026-02-05 12:53:42,625] 76 root - INFO - Models loaded successfully for real-time prediction
+[2026-02-05 12:53:42,636] 97 werkzeug - WARNING -  * Debugger is active!
+[2026-02-05 12:53:42,639] 97 werkzeug - INFO -  * Debugger PIN: 997-252-823
+[2026-02-05 12:53:43,030] 97 werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 12:53:43] "GET / HTTP/1.1" 200 -
+[2026-02-05 12:53:45,610] 97 werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 12:53:45] "GET / HTTP/1.1" 200 -
+[2026-02-05 12:53:49,308] 162 root - INFO - Processing URL: https://www.google.com
+[2026-02-05 12:54:05,926] 168 root - INFO - Extracted 30 features
+[2026-02-05 12:54:05,937] 196 root - INFO - Prediction: Safe (Confidence: 91.0%)
+[2026-02-05 12:54:05,937] 97 werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 12:54:05] "POST /predict-url HTTP/1.1" 200 -

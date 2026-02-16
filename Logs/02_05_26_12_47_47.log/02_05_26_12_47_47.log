@@ -1,0 +1,15 @@
+[2026-02-05 12:47:49,869] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 12:47:49,873] 107 dagshub - INFO - Accessing as Karamjodh
+[2026-02-05 12:47:50,945] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Karamjodh/Network-Security "HTTP/1.1 200 OK"
+[2026-02-05 12:47:52,027] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-02-05 12:47:52,029] 107 dagshub - INFO - Initialized MLflow to track repo "Karamjodh/Network-Security"
+[2026-02-05 12:47:52,029] 107 dagshub - INFO - Repository Karamjodh/Network-Security initialized!
+[2026-02-05 12:47:52,151] 76 root - INFO - Models loaded successfully for real-time prediction
+[2026-02-05 12:47:52,162] 97 werkzeug - WARNING -  * Debugger is active!
+[2026-02-05 12:47:52,166] 97 werkzeug - INFO -  * Debugger PIN: 997-252-823
+[2026-02-05 12:47:52,201] 97 werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 12:47:52] "GET / HTTP/1.1" 200 -
+[2026-02-05 12:47:56,158] 162 root - INFO - Processing URL: https://www.github.com
+[2026-02-05 12:48:02,135] 168 root - INFO - Extracted 30 features
+[2026-02-05 12:48:02,146] 194 root - INFO - Prediction: Phishing (Confidence: 86.0%)
+[2026-02-05 12:48:02,147] 97 werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 12:48:02] "POST /predict-url HTTP/1.1" 200 -
+[2026-02-05 12:51:25,451] 97 werkzeug - INFO -  * Detected change in 'D:\\ML Models-Projects\\Network Security\\App.py', reloading
